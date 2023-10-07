@@ -6,6 +6,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+
+## Run tests with code coverage
+```
+npm test -- --coverage --watchAll=false
+```
+
+
 ### `yarn start`
 
 Runs the app in the development mode.\

@@ -37,6 +37,7 @@ describe("FollowersList", () => {
         expect(followerDivElement).toBeInTheDocument();
     });
     
+    // eslint-disable-next-line jest/no-identical-title
     it('should fetch and render input element', async () => {
         render(
             <MockFollowersList />

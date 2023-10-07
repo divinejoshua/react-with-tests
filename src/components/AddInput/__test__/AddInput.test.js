@@ -28,6 +28,7 @@ describe("AddInput", () => {
         expect(inputElement.value).toBe("Go Grocery Shopping");
     });
     
+    // eslint-disable-next-line jest/no-identical-title
     it('should be able to type into input', () => {
         render(
             <AddInput 

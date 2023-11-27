@@ -9,7 +9,7 @@ In the project directory, you can run:
 
 ## Run tests with code coverage
 ```
-npm test -- --coverage --watchAll=false
+npm run test:coverage
 ```
 
 

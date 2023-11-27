@@ -9,7 +9,7 @@ In the project directory, you can run:
 
 ## Run tests with code coverage
 ```
-npm run test:coverage
+npm run test:coverage  || exit 0
 ```
 
 

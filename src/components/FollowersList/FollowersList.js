@@ -24,10 +24,10 @@ export default function FollowersList() {
             <div>
                 {followers.map((follower, index) => (
                     <div key={index} className="follower-item" data-testid={`follower-item-${index}`}>
-                        <img alt='profile' src={follower.picture.large}/>
+                        <img alt={`profileImage-${index}`} src={follower.picture.large}/>
                         <div className="followers-details">
                             <div className="follower-item-name">
-                                <h4>{follower.name.first}</h4> <h4>{follower.name.last}</h4>
+                                <h4 title={follower.name.first}>{follower.name.first}</h4> <h4>{follower.name.last}</h4>
                             </div>
                             <p>{follower.login.username}</p>
                         </div>

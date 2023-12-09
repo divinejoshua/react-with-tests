@@ -1,28 +1,12 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import FollowersList from "../FollowersList";
-import fetchMock from 'jest-fetch-mock';
 import axios from "axios"
 
+// eslint-disable-next-line jest/no-mocks-import
+import fakeFollowers from '../../../__mocks__/followers.json'
 
-const fakeFollowers = {
-    data: {
-        results: [
-            {
-                name: {
-                    first: "Laith",
-                    last: "Harb"
-                },
-                picture: {
-                    large: "https://randomuser.me/api/portraits/men/59.jpg"
-                },
-                login: {
-                    username: "ThePhonyGOAT"
-                }
-            },
-        ]
-    }
-}
+
 
 const MockFollowersList = () => {
 
@@ -40,9 +24,11 @@ describe("FollowersList", () => {
         jest.restoreAllMocks();
     });
 
+
+    // It test that the followes list should be displayed with the right data
     it('should fetch and render input element', async () => {
 
-
+        // Mock the request
         const mockedAxios = fakeFollowers
         jest.spyOn(axios, 'get').mockResolvedValueOnce(mockedAxios);
 
